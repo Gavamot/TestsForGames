@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillsTree", "SkillsTree\SkillsTree.csproj", "{CE690826-BD15-4F88-A50C-98F910A2FEF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillsTree", "SkillsTree\SkillsTree.csproj", "{CE690826-BD15-4F88-A50C-98F910A2FEF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{BE4E810A-AFC0-4E06-8B5E-097CDB447B04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{BE4E810A-AFC0-4E06-8B5E-097CDB447B04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reversi", "Reversi\Reversi.csproj", "{A956410F-D3A2-433B-995A-648975E17F55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BE4E810A-AFC0-4E06-8B5E-097CDB447B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE4E810A-AFC0-4E06-8B5E-097CDB447B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE4E810A-AFC0-4E06-8B5E-097CDB447B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A956410F-D3A2-433B-995A-648975E17F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A956410F-D3A2-433B-995A-648975E17F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A956410F-D3A2-433B-995A-648975E17F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A956410F-D3A2-433B-995A-648975E17F55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
