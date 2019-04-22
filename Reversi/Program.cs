@@ -1,5 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using Reversi;
+using System;
+using System.Dynamic;
+using System.Net.WebSockets;
 
 namespace Reversi
 {
@@ -48,9 +50,8 @@ namespace Reversi
                 . X O O O . X
                 . . . . . . .";
 
-
-
             string result4 = Solution.PlaceToken(board4); Console.WriteLine("board 4: " + result4);
+            Console.ReadKey();
         }
 
 
@@ -59,63 +60,12 @@ namespace Reversi
 
     public class Solution
     {
-        public static string PlaceToken(string board)
+        public static string PlaceToken(string token)
         {
-            var b = new Board(board);
-            return "A1";
+            var factory = new BoardFactory();
+            var board = factory.Create(token);
+            var nextTurnGenerator = new NextTurnGenerator();
+            return nextTurnGenerator.FindMaxStep(board);
         }
     }
-
-
-    public enum TileTypes
-    {
-        Empty = '.',
-        Enemy = 'O',
-        Player = 'X'
-    }
-
-    public class Board
-    {
-        private int width;
-
-        public int Width
-        {
-            get => width;
-            private set
-            {
-                if(value <= 3 || value > 26)
-                    throw new ArgumentException();
-                width = value;
-            }
-        }
-
-        private int height;
-        public int Height
-        {
-            get => height;
-            private set
-            {
-                if (value <= 0 || value > 26)
-                    throw new ArgumentException();
-                height = value;
-            }
-        }
-
-        public Board(string str)
-        {
-            var settings = str.Split(Environment.NewLine);
-            var wh = settings[0]
-                .Split(" ")
-                .Select(x=> x.Trim())
-                .Select(int.Parse)
-                .ToArray();
-
-            width = wh[0];
-            height = wh[1];
-
-        }
-
-      
-    }
-
 }
