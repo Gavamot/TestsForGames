@@ -51,11 +51,7 @@ namespace Reversi
                 . . . . . . .";
 
             string result4 = Solution.PlaceToken(board4); Console.WriteLine("board 4: " + result4);
-            Console.ReadKey();
         }
-
-
-
     }
 
     public class Solution
